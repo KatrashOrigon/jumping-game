@@ -1,0 +1,81 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.game-window {
+	width: 100%;
+	height: 500px;
+	border-bottom: 20px solid #1d8038;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+	background: linear-gradient(#044ecf, #9ff3fc)
+}
+
+.jumper {
+	width: 100px;
+	position: absolute;
+	bottom: 0;
+}
+
+.jump {
+	animation: jump 600ms ease-out;
+}
+
+.obstacle {
+	position: absolute;
+	bottom: 0;
+	width: 50px;
+	height: 100px;
+	animation: obstacle-moviment 1.50s infinite linear;
+}
+
+.cloud {
+	position: absolute;
+	width: 40%;
+	height: 30%;
+	top: 50px;
+	animation: cloud-moviment 100s infinite linear;
+}
+
+.gameover {
+	display: none;
+	margin: auto;
+	width: 50%;
+	padding: 50px;
+	font-size: 40px;
+	text-align: center;
+	height: 100vh;
+}
+
+@keyframes jump {
+	0% {
+		bottom: 0;
+	} 40% {
+		bottom: 120px;
+	} 50% {
+		bottom: 130px;
+	} 60% {
+		bottom: 120px;
+	} 100% {
+		bottom: 0;
+	}
+}
+
+@keyframes obstacle-moviment {
+	from {
+		right: -10%;
+	} to {
+		right: 100%;
+	}
+}
+    
+@keyframes cloud-moviment {
+	from {
+		right: -40%;
+	} to {
+		right: 100%;
+	}
+}
